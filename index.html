@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetSol</title>
+    <link rel="stylesheet" href="index.css"> <!-- Enlace a tu hoja de estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/Imagen de WhatsApp 2024-08-02 a las 21.03.50_35650d4d.jpg" alt="NetSol Logo">
+                <span>NetSol Dynamic Solutions</span>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="nosotros">
+            <div class="background-image"></div>
+            <div class="content">
+                <h2>Nosotros</h2>
+                <p>Nos especializamos en ofrecer servicios de desarrollo web, aplicaciones web, aplicaciones para inventario, y soluciones para facturación y cotización. Nuestro equipo está comprometido con brindar productos de alta calidad que satisfagan las necesidades de nuestros clientes.</p>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <div class="services-container">
+                <article>
+                    <i class="fas fa-code"></i>
+                    <h3>Desarrollo Web</h3>
+                    <p>Ofrecemos servicios completos de desarrollo web, creando sitios modernos, responsivos y optimizados.</p>
+                </article>
+                <article>
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Aplicaciones Web</h3>
+                    <p>Desarrollamos aplicaciones web personalizadas para satisfacer las necesidades específicas de tu negocio.</p>
+                </article>
+                <article>
+                    <i class="fas fa-boxes"></i>
+                    <h3>Aplicaciones para Inventario</h3>
+                    <p>Soluciones de software para la gestión eficiente de inventarios, ayudando a mantener un control preciso y en tiempo real.</p>
+                </article>
+                <article>
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>Facturas y Cotizaciones</h3>
+                    <p>Creamos aplicaciones para la generación y gestión de facturas y cotizaciones, facilitando los procesos administrativos.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contactos">
+            <h2>Contactos</h2>
+            <p>Para más información, puedes contactarnos a través de los siguientes medios:</p>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Correo electrónico: somosnetsol@gmail.com</li>
+                <li><i class="fas fa-phone"></i> Teléfono: +1 849-466-1247</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NetSol. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
