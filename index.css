@@ -1,4 +1,4 @@
-
+/* Estilos globales */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -40,6 +40,7 @@ nav .logo img {
 nav .logo span {
     font-size: 24px;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 nav .nav-menu {
@@ -72,6 +73,7 @@ nav .nav-menu li a:hover {
     display: none;
     cursor: pointer;
     flex-direction: column;
+    margin-left: auto;
 }
 
 .hamburger span {
@@ -104,6 +106,17 @@ nav .nav-menu li a:hover {
     left: 0;
     width: 100%;
     z-index: 1000;
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul.show {
+    display: flex;
 }
 
 main {
@@ -162,6 +175,7 @@ section#nosotros .content {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     max-width: 800px;
     margin: 0 auto;
+    box-shadow: #1abc9c;
 }
 
 section#nosotros .content p {
@@ -239,9 +253,17 @@ footer {
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
 
+/* Media Queries */
 @media (min-width: 768px) {
     nav ul {
+        display: flex;
         justify-content: flex-start;
+        align-items: center;
+        background-color: transparent;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        text-align: left;
     }
 
     .hamburger {
@@ -266,15 +288,26 @@ footer {
 }
 
 @media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: 20px;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+    }
+
     nav ul {
         display: none;
     }
 
     #menu-toggle:checked ~ .nav-menu {
-        display: flex;
-    }
-
-    .hamburger {
         display: flex;
     }
 
